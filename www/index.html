@@ -203,6 +203,12 @@
         var time=(currentTime-startTime)/1000;
         $("#time").html("経過時間:"+parseInt(time));
       }  
+      var rest=period-parseInt(time);
+      $("#remain").html("経過時間:"+rest);
+      analog(rest);
+      if(rest<=0){
+        active=false;
+      }
         
         
     } 
